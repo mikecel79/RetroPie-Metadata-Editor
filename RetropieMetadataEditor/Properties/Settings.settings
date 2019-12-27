@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RetropieMetadataEditor.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PathRoms" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\retropie\roms\{SYSTEM}</Value>
+    </Setting>
+    <Setting Name="PathGamelists" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\retropie\configs\all\emulationstation\gamelists\{SYSTEM}</Value>
+    </Setting>
+    <Setting Name="PathImages" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\retropie\configs\all\emulationstation\downloaded_images\{SYSTEM}</Value>
+    </Setting>
+    <Setting Name="ImageEditingSoftware" Type="System.String" Scope="User">
+      <Value Profile="(Default)">%windir%\system32\mspaint.exe</Value>
+    </Setting>
+    <Setting Name="ImageNameSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-image</Value>
+    </Setting>
+    <Setting Name="PathImagesLocal" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/home/pi/.emulationstation/downloaded_images/{SYSTEM}</Value>
+    </Setting>
+    <Setting Name="IES1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files (x86)\Jasc Software Inc\Paint Shop Pro 9\Paint Shop Pro 9.exe</Value>
+    </Setting>
+    <Setting Name="IES2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">%windir%\system32\mspaint.exe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
