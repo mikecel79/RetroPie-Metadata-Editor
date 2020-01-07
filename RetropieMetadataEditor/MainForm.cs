@@ -30,8 +30,7 @@ namespace RetropieMetadataEditor
             InitializeComponent();
 
             this.Text = "RetroPie Metadata Editor v" + Application.ProductVersion + " BETA";
-            this.labelApplicationFullName.Text = "RetroPie Metadata Editor v" + Application.ProductVersion + " BETA";
-            
+                        
             LoadSettings();
         }
 
@@ -179,11 +178,7 @@ namespace RetropieMetadataEditor
             buttonSaveSettings_Click(sender, e);
         }
                 
-        private void linkLabelMail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("mailto:" + linkLabelMail.Text + "?subject=RetroPie Metadata Editor");
-        }
-
+        
         public void Log(string message)
         {
             textBoxLog.AppendText(message + Environment.NewLine);
@@ -534,12 +529,16 @@ namespace RetropieMetadataEditor
         }
 
 
+
         #endregion
 
         #region Tab: Dupecheck
 
         #endregion
 
-        
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

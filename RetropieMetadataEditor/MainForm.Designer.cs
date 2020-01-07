@@ -30,10 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageConfig = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.linkLabelMail = new System.Windows.Forms.LinkLabel();
-            this.labelApplicationFullName = new System.Windows.Forms.Label();
+            this.buttonRestoreDefaultSettings = new System.Windows.Forms.Button();
             this.buttonSaveSettings = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -112,10 +109,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.openFileDialogImage = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialogExport = new System.Windows.Forms.OpenFileDialog();
-            this.buttonRestoreDefaultSettings = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
             this.tabPageConfig.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPageEditor.SuspendLayout();
@@ -132,6 +130,7 @@
             this.tabPageExport.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabPageDupecheck.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -150,8 +149,8 @@
             // 
             // tabPageConfig
             // 
-            this.tabPageConfig.Controls.Add(this.buttonRestoreDefaultSettings);
             this.tabPageConfig.Controls.Add(this.groupBox4);
+            this.tabPageConfig.Controls.Add(this.buttonRestoreDefaultSettings);
             this.tabPageConfig.Controls.Add(this.buttonSaveSettings);
             this.tabPageConfig.Controls.Add(this.groupBox2);
             this.tabPageConfig.Controls.Add(this.groupBox1);
@@ -164,47 +163,16 @@
             this.tabPageConfig.Text = "Configuration";
             this.tabPageConfig.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
+            // buttonRestoreDefaultSettings
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.linkLabelMail);
-            this.groupBox4.Controls.Add(this.labelApplicationFullName);
-            this.groupBox4.Location = new System.Drawing.Point(487, 427);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(441, 100);
-            this.groupBox4.TabIndex = 9;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "About";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(211, 46);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(18, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "by";
-            // 
-            // linkLabelMail
-            // 
-            this.linkLabelMail.AutoSize = true;
-            this.linkLabelMail.Location = new System.Drawing.Point(158, 65);
-            this.linkLabelMail.Name = "linkLabelMail";
-            this.linkLabelMail.Size = new System.Drawing.Size(126, 13);
-            this.linkLabelMail.TabIndex = 1;
-            this.linkLabelMail.TabStop = true;
-            this.linkLabelMail.Text = "amadeus@amavision.org";
-            this.linkLabelMail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMail_LinkClicked);
-            // 
-            // labelApplicationFullName
-            // 
-            this.labelApplicationFullName.AutoSize = true;
-            this.labelApplicationFullName.Location = new System.Drawing.Point(125, 27);
-            this.labelApplicationFullName.Name = "labelApplicationFullName";
-            this.labelApplicationFullName.Size = new System.Drawing.Size(0, 13);
-            this.labelApplicationFullName.TabIndex = 0;
+            this.buttonRestoreDefaultSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRestoreDefaultSettings.Location = new System.Drawing.Point(621, 6);
+            this.buttonRestoreDefaultSettings.Name = "buttonRestoreDefaultSettings";
+            this.buttonRestoreDefaultSettings.Size = new System.Drawing.Size(150, 23);
+            this.buttonRestoreDefaultSettings.TabIndex = 10;
+            this.buttonRestoreDefaultSettings.Text = "Restore Default Settings";
+            this.buttonRestoreDefaultSettings.UseVisualStyleBackColor = true;
+            this.buttonRestoreDefaultSettings.Click += new System.EventHandler(this.buttonRestoreDefaultSettings_Click);
             // 
             // buttonSaveSettings
             // 
@@ -236,7 +204,7 @@
             this.groupBox2.Controls.Add(this.textBoxSettingsImageSuffix);
             this.groupBox2.Location = new System.Drawing.Point(487, 35);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(438, 386);
+            this.groupBox2.Size = new System.Drawing.Size(438, 335);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Settings";
@@ -1062,16 +1030,36 @@
             this.openFileDialogExport.FileName = "Gamelist.txt";
             this.openFileDialogExport.Filter = "Text File|*.txt";
             // 
-            // buttonRestoreDefaultSettings
+            // groupBox4
             // 
-            this.buttonRestoreDefaultSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRestoreDefaultSettings.Location = new System.Drawing.Point(621, 6);
-            this.buttonRestoreDefaultSettings.Name = "buttonRestoreDefaultSettings";
-            this.buttonRestoreDefaultSettings.Size = new System.Drawing.Size(150, 23);
-            this.buttonRestoreDefaultSettings.TabIndex = 10;
-            this.buttonRestoreDefaultSettings.Text = "Restore Default Settings";
-            this.buttonRestoreDefaultSettings.UseVisualStyleBackColor = true;
-            this.buttonRestoreDefaultSettings.Click += new System.EventHandler(this.buttonRestoreDefaultSettings_Click);
+            this.groupBox4.Controls.Add(this.linkLabel1);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Location = new System.Drawing.Point(487, 376);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(432, 148);
+            this.groupBox4.TabIndex = 11;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "About";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(86, 44);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(225, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "To report issues or get the latest version go to ";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(43, 57);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(272, 13);
+            this.linkLabel1.TabIndex = 1;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://github.com/mikecel79/RetroPie-Metadata-Editor";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // MainForm
             // 
@@ -1083,8 +1071,6 @@
             this.Name = "MainForm";
             this.tabControl1.ResumeLayout(false);
             this.tabPageConfig.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1109,6 +1095,8 @@
             this.groupBox3.PerformLayout();
             this.tabPageDupecheck.ResumeLayout(false);
             this.tabPageDupecheck.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1176,10 +1164,6 @@
         private System.Windows.Forms.TextBox textBoxSettingsLocalImagePath;
         private System.Windows.Forms.TextBox textBoxSettingsImageEditingSoftware;
         private System.Windows.Forms.OpenFileDialog openFileDialogExport;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label labelApplicationFullName;
-        private System.Windows.Forms.LinkLabel linkLabelMail;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -1200,6 +1184,9 @@
         private System.Windows.Forms.ComboBox comboBoxGamelistCleanUp;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonRestoreDefaultSettings;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label8;
     }
 }
 
